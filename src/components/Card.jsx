@@ -1,0 +1,42 @@
+import '../App.css'
+
+function Card({item,setCart,addToCart}){
+
+    const handleAddToCart= ()=>{
+
+        let tempCart =[];
+         tempCart = [...addToCart];
+
+        let checkData= tempCart.filter((item)=>item.name === name)
+
+         if(!checkData.length){
+            console.log("i worked");
+            tempCart.push({
+                ...item,
+                quantity:1
+            })
+            console.log(tempCart);
+            setCart(tempCart)
+         }
+         console.log("button clicked");
+    }
+
+    return(
+        <>
+            <div className='card'>
+                <img src={item.image_url}>
+                </img>
+                <div>
+                    <h1>{item.name}</h1>
+                    <p>${item.price}</p>
+                    <button type="button" onClick={handleAddToCart}>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </>
+    )
+}
+
+
+export default Card

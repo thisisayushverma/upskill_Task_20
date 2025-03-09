@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Nike Air Max 270",
+        "price": 149.99,
+        "image_url": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Adidas Ultraboost",
+        "price": 179.99,
+        "image_url": "https://images.pexels.com/photos/2759783/pexels-photo-2759783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Puma RS-X",
+        "price": 120.00,
+        "image_url": "https://images.pexels.com/photos/2759783/pexels-photo-2759783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Reebok Classic Leather",
+        "price": 89.99,
+        "image_url": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "New Balance 574",
+        "price": 99.99,
+        "image_url": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Under Armour HOVR Phantom",
+        "price": 140.00,
+        "image_url": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    }
+]

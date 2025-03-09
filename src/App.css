@@ -1,42 +1,129 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  box-sizing: border-box ;
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar{
+  display: flex;
+  align-items: center;
   padding: 2rem;
+  gap: 5rem;
+  background-color: #e2e2e2;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+a{
+  cursor: pointer;
+}
+
+main{
+  display: flex;
+  gap: 5vw;
+  width: 100%;
+}
+
+.card-Section{
+  display: grid;
+  grid-template-areas: "onee twoo";
+  width: 60%;
+  grid-area: one;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+
+.cart-Section{
+  width: 40%;
+  padding: 2rem;
+  grid-area: two;
+  margin: 2rem;
+  border-radius: 10px;
+  background-color: #e2e2e2;
+}
+
+.card{
+  width: 100%;
+}
+
+.card > img {
+  width: 100%;
+  height: 20rem;
+  object-fit: contain;
+}
+
+.card > div{
+  background-color: rgb(255, 186, 102);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.card > div > button{
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #161515;
+  background-color: transparent;
+  color: #000;
+  font-weight: 600;
+}
+
+.cart{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cart > img{
+  object-fit: scale-down;
+  height: 5rem;
+  width: 5rem;
+}
+
+.cart-description{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.cart-price{
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+}
+
+.cart-price > p{
+  font-weight: 600;
+}
+
+.cart-price > div{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  
+}
+
+.cart-price > div > p{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cart-price > div > button{
+  border-radius: 10px;
+  width: 2rem;
+  outline: none;
+  border: 1px solid;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  padding: 0.7rem;
+  cursor: pointer;
 }
