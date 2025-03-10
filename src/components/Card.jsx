@@ -7,7 +7,7 @@ function Card({item,setCart,addToCart}){
         let tempCart =[];
          tempCart = [...addToCart];
 
-        let checkData= tempCart.filter((item)=>item.name === name)
+        let checkData= tempCart.filter((cardItem)=>cardItem.name === item.name)
 
          if(!checkData.length){
             console.log("i worked");
