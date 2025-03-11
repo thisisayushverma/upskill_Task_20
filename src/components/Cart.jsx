@@ -12,7 +12,7 @@ function Cart({id, item ,cartData, setCart,setTotal}){
                 quantity: cartItem.quantity + 1 
             } : cartItem)
         )
-        setTotal((prev)=> prev+item.price)
+        setTotal((prev)=> Math.round((prev+item.price)*100)/100)
     }
 
     const decQuantity = () =>{
@@ -22,7 +22,7 @@ function Cart({id, item ,cartData, setCart,setTotal}){
                 quantity: item.quantity - 1 
             } : item).filter((item)=> item.quantity > 0)
             )
-            setTotal((prev)=> prev-item.price)
+            setTotal((prev)=> Math.round((prev-item.price)*100)/100)
         }
     return (
         <>

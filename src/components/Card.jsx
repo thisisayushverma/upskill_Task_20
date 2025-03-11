@@ -17,7 +17,7 @@ function Card({item,setCart,addToCart,setTotal}){
             })
             console.log(tempCart);
             setCart(tempCart)
-            setTotal((prev)=> prev+item.price)
+            setTotal((prev)=> Math.round((prev+item.price)*100)/100)
          }
          console.log("button clicked");
     }
