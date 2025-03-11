@@ -75,6 +75,7 @@ function App() {
         
         <section className='cart-Section'>
           <h1>Cart</h1>
+          <div className='cart-Container'>
           {cartData.length > 0 ? cartData.map((item,key)=>{
             return <Cart 
             key={key} 
@@ -85,6 +86,7 @@ function App() {
             setTotal={setTotal}
             />
           }) : null}
+          </div>
 
           <h1 className='total-class'> Total:${total}</h1>
         </section>
