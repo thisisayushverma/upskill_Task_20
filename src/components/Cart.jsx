@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function Cart({id, item ,cartData, setCart}){
+function Cart({id, item ,cartData, setCart,setTotal}){
     console.log("hey Cart component",item);
 
     const incQuantity = () =>{
@@ -12,6 +12,7 @@ function Cart({id, item ,cartData, setCart}){
                 quantity: cartItem.quantity + 1 
             } : cartItem)
         )
+        setTotal((prev)=> prev+item.price)
     }
 
     const decQuantity = () =>{
@@ -21,6 +22,7 @@ function Cart({id, item ,cartData, setCart}){
                 quantity: item.quantity - 1 
             } : item).filter((item)=> item.quantity > 0)
             )
+            setTotal((prev)=> prev-item.price)
         }
     return (
         <>

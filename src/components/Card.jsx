@@ -1,6 +1,6 @@
 import '../App.css'
 
-function Card({item,setCart,addToCart}){
+function Card({item,setCart,addToCart,setTotal}){
 
     const handleAddToCart= ()=>{
 
@@ -17,6 +17,7 @@ function Card({item,setCart,addToCart}){
             })
             console.log(tempCart);
             setCart(tempCart)
+            setTotal((prev)=> prev+item.price)
          }
          console.log("button clicked");
     }

@@ -45,6 +45,7 @@ function App() {
   ]
 
   const [cartData,setCartData] = useState([])
+  const [total,setTotal] = useState(0)
 
 
   return (
@@ -66,7 +67,8 @@ function App() {
             data.map((item,key)=>{
               return <Card  key={key} item={item} 
               addToCart={cartData}
-              setCart={setCartData}/>
+              setCart={setCartData}
+              setTotal={setTotal}/>
             })
           }
         </section>
@@ -74,9 +76,17 @@ function App() {
         <section className='cart-Section'>
           <h1>Cart</h1>
           {cartData.length > 0 ? cartData.map((item,key)=>{
-            return <Cart key={key} item={item} id={item.id} cartData= {cartData} setCart={setCartData}
+            return <Cart 
+            key={key} 
+            item={item} 
+            id={item.id} 
+            cartData= {cartData} 
+            setCart={setCartData}
+            setTotal={setTotal}
             />
           }) : null}
+
+          <h1 className='total-class'> Total:${total}</h1>
         </section>
       </main>
       

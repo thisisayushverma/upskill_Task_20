@@ -42,6 +42,7 @@ main{
 .cart-Section{
   width: 40%;
   padding: 2rem;
+  height: fit-content;
   grid-area: two;
   margin: 2rem;
   border-radius: 10px;
@@ -126,4 +127,10 @@ main{
   text-align: center;
   padding: 0.7rem;
   cursor: pointer;
+}
+
+.total-class{
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
