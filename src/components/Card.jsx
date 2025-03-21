@@ -1,11 +1,12 @@
 import '../App.css'
+import useCartContext from '../context/cartContext';
 
-function Card({item,setCart,addToCart,setTotal}){
-
-    const handleAddToCart= ()=>{
+function Card({item}){
+    const {cartData,setCartData,setTotal} = useCartContext();
+    const handlecartData= ()=>{
 
         let tempCart =[];
-         tempCart = [...addToCart];
+         tempCart = [...cartData];
 
         let checkData= tempCart.filter((cardItem)=>cardItem.name === item.name)
 
@@ -16,7 +17,7 @@ function Card({item,setCart,addToCart,setTotal}){
                 quantity:1
             })
             console.log(tempCart);
-            setCart(tempCart)
+            setCartData(tempCart)
             setTotal((prev)=> Math.round((prev+item.price)*100)/100)
          }
          console.log("button clicked");
@@ -30,7 +31,7 @@ function Card({item,setCart,addToCart,setTotal}){
                 <div>
                     <h1>{item.name}</h1>
                     <p>${item.price}</p>
-                    <button type="button" onClick={handleAddToCart}>
+                    <button type="button" onClick={handlecartData}>
                         Add to Cart
                     </button>
                 </div>
